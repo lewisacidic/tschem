@@ -13,7 +13,7 @@
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
         "sourceMap": true,
-        "outDir": "src/build"
+        "outDir": "build"
     },
     "filesGlob": [
         "./**/*.ts",
@@ -24,6 +24,8 @@
         "./src/app/graph.ts",
         "./src/app/io.ts",
         "./src/app/tschem.ts",
+        "./src/test/graph.spec.ts",
+        "./typings/jasmine/jasmine.d.ts",
         "./typings/tsd.d.ts"
     ]
 }
