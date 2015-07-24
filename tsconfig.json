@@ -1,0 +1,29 @@
+{
+    "version": "1.5.3",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "sourceMap": true,
+        "outDir": "src/build"
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*"
+    ],
+    "files": [
+        "./src/app/core.ts",
+        "./src/app/graph.ts",
+        "./src/app/io.ts",
+        "./src/app/tschem.ts",
+        "./typings/tsd.d.ts"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@richlewis42/tschem",
+  "version": "0.1.0",
+  "author": "Rich Lewis",
+  "main": "app/build/index.js",
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "description": "An awesome MVC typescript project, that displays Hello World.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richlewis42/tschem.git"
+  },
+  "keywords": [
+    "cheminformatics",
+    "typescript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richlewis42/tschem/issues"
+  },
+  "homepage": "https://github.com/richlewis42/tschem#readme"
+}
