@@ -11,11 +11,11 @@ describe('Atom tests', () => {
   });
 
   it('should be default Carbon', () => {
-    expect(defaultAtom.atomicNumber).toBe(6);
+    expect(defaultAtom.atomicNumber).toEqual(6);
   });
 
   it('should have C symbol', () => {
-    expect(defaultAtom.symbol).toBe('C');
+    expect(defaultAtom.symbol).toEqual('C');
   });
 
   let customAtom = new Atom({atomicNumber: 7});
@@ -25,17 +25,17 @@ describe('Atom tests', () => {
   });
 
   it('should be have N as a symbol', () => {
-    expect(customAtom.symbol).toBe('N');
+    expect(customAtom.symbol).toEqual('N');
   });
 
   it('should change its symbol when the atomic number is set', () => {
     customAtom.atomicNumber = 8;
-    expect(customAtom.symbol).toBe('O');
+    expect(customAtom.symbol).toEqual('O');
   });
 
   it('should change its atomic number when its symbol is set', () => {
     customAtom.symbol = 'Cl';
-    expect(customAtom.atomicNumber).toBe(17);
+    expect(customAtom.atomicNumber).toEqual(17);
   });
 });
 
@@ -54,17 +54,29 @@ describe('Molecule tests', () => {
         {beginAtomIndex: 0,  endAtomIndex: 3},
         {beginAtomIndex: 0,  endAtomIndex: 4}
       ],
-      conformers: [],
+      conformers: [{
+        positions: [
+          [0.000000, 0.000000, 0.000000],
+          [0.629118, 0.629118, 0.629118],
+          [-0.629118, -0.629118, 0.629118],
+          [0.629118, -0.629118, -0.629118],
+          [-0.629118, 0.629118, -0.629118],
+        ]
+        }],
       name: 'methane'
   });
   it('should be able to create a molecule', () => {
     expect(m).toBeDefined();
   });
   it('should have 5 atoms', () => {
-    expect(m.atoms.length).toBe(5);
+    expect(m.atoms.length).toEqual(5);
   });
   it('should have 4 bonds', () => {
-    expect(m.bonds.length).toBe(4);
+    expect(m.bonds.length).toEqual(4);
+  });
+  it('should have center 0', () => {
+    let c = m.conformers[0].center();
+    expect(c).toEqual([0,0,0]);
   });
 });
 

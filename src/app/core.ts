@@ -137,6 +137,37 @@ enum Symbol {
    constructor (json: IConformer = {positions:[]}) {
      this.positions = json.positions;
    }
+   bottomLeft(): number[] {
+     return this.positions.reduce((prev, curr) => {
+        return [
+          Math.max(prev[0], curr[0]),
+          Math.max(prev[1], curr[1]),
+          Math.max(prev[2], curr[2])
+        ];
+    });
+  }
+  topRight(): number[] {
+    return this.positions.reduce((prev, curr) => {
+      return [
+        Math.min(prev[0], curr[0]),
+        Math.min(prev[1], curr[1]),
+        Math.min(prev[2], curr[2])
+      ];
+    });
+  }
+  bounds(): number[][] {
+    return [this.bottomLeft(), this.topRight()]
+  }
+  center(): number[] {
+    let bl = this.bottomLeft();
+    let tr = this.topRight();
+    return [
+      0.5 * (bl[0] + tr[0]),
+      0.5 * (bl[1] + tr[1]),
+      0.5 * (bl[2] + tr[2])
+    ];
+  }
+
  }
 
 

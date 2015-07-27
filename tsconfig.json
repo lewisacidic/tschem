@@ -21,6 +21,7 @@
     ],
     "files": [
         "./src/app/core.ts",
+        "./src/app/descriptors.ts",
         "./src/app/graph.ts",
         "./src/app/io.ts",
         "./src/app/tschem.ts",
