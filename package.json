@@ -1,5 +1,5 @@
 {
-  "name": "@richlewis42/tschem",
+  "name": "tschem",
   "version": "0.1.0",
   "author": "Rich Lewis",
   "main": "build/tschem.js",
