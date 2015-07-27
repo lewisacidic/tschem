@@ -22,6 +22,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jasmine-node-karma build/test"
+    "test": "jasmine-node-karma build/src/test"
   }
 }
