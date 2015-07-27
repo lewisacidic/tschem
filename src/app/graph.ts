@@ -32,9 +32,12 @@
 
    set begin (node: Node) {
 
-     // first remove this from the previous node
+     // first remove this from the previous node (if there is a previous node)
      let oldNode = this._begin;
-     oldNode.edges.splice(oldNode.edges.indexOf(this), 1)
+     if(typeof(oldNode) !== 'undefined') {
+        console.log(oldNode);
+        oldNode.edges.splice(oldNode.edges.indexOf(this), 1);
+     }
 
      // now add this to the new node
      this._begin = node;
@@ -46,9 +49,11 @@
    }
 
    set end (node: Node) {
-     // first remove this from the previous node
+     // first remove this from the previous node (if there is a previous node)
      let oldNode = this._end;
-     oldNode.edges.splice(oldNode.edges.indexOf(this), 1)
+     if(typeof(oldNode) !== 'undefined') {
+        oldNode.edges.splice(oldNode.edges.indexOf(this), 1);
+     }
 
      // now add this to the new node
      this._end = node;

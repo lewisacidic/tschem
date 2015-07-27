@@ -24,7 +24,9 @@
         "./src/app/graph.ts",
         "./src/app/io.ts",
         "./src/app/tschem.ts",
+        "./src/test/core.spec.ts",
         "./src/test/graph.spec.ts",
+        "./test/graph.spec.ts",
         "./typings/jasmine/jasmine.d.ts",
         "./typings/tsd.d.ts"
     ]
